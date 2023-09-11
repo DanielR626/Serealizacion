@@ -37,16 +37,16 @@ public class SvVideo extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         FileInputStream cargar= new FileInputStream(getServletContext().getRealPath("videosGuardados.data"));
-         ObjectInputStream caragado = new ObjectInputStream(cargar);
+         ObjectInputStream cargado = new ObjectInputStream(cargar);
         try {
-            Video video = (Video) caragado.readObject();
+            Video video = (Video) cargado.readObject();
             videos.add(video);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(SvVideo.class.getName()).log(Level.SEVERE, null, ex);
         }
       
         request.setAttribute("videos",videos);
-       caragado.close();
+       cargado.close();
        request.getRequestDispatcher("mostrar.jsp").forward(request, response);
         
     }

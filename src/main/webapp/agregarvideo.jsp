@@ -53,19 +53,16 @@ body {
     <body>
         
         <div class="container">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.jsp" >
-                        <h1> Music</h1>
-                    </a>
+
                     <a class="navbar-brand" href="index.jsp">
-                        <h1>inicio</h1>
+                        <h1>INICIO</h1>
                     </a>
                 </div>
                 
             </div>   
         
         <section class="container bajar">
-            <h1>sistema de reproduccion</h1>
+            <h1> SISTEMA DE REPRODUCCION </h1>
             <form action="SvVideo" method="POST">
                 <label for="idVideo">idVideo: </label>
                 <input class="form-control" type="text" name="idVideo"><br>
